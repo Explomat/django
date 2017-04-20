@@ -1,0 +1,26 @@
+start virtualenv:
+	source dj/bin/activate
+
+django create app:
+	python manage.py startapp polls
+
+django run dev server:
+	python manage.py runserver
+
+django create migrations classes:
+	python manage.py makemigrations <app - "polls">
+
+django view sql created by migrations:
+	python manage.py sqlmigrate <app - "polls"> <migration name - "0001">
+
+django create tables on migrations:
+	$ python manage.py migrate
+
+django check problems in project:
+	python manage.py check
+
+django shell:
+	python manage.py shell
+
+django create user for admin panel:
+	python manage.py createsuperuser
